@@ -1,0 +1,5 @@
+node_modules/
+login.json
+views/noticia_body.ejs
+server_log
+*.log

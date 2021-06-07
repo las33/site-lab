@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<% include ./base/head %>
+
+	<script>	
+
+			document.addEventListener('contentChanged', function() {
+				var elems = document.querySelectorAll('.carousel');
+				var instances = M.Carousel.init(elems, {
+				fullWidth: true,
+				indicators: true
+				});
+			});		 	
+	
+			setInterval(function() {
+				$('.carousel').carousel('next');
+			}, 15000);
+				
+		</script>
+</head>
+<body>
+	<% include ./base/header %> 
+  	<main>
+		<div id="index-banner" class="parallax-container">
+			<div class="section no-pad-bot">
+				<div class="container">
+					<br><br>
+					<h1 class="header center white-text  ">Laboratório OKI Brasil CIn-UFPE</h1>
+					<div class="row center">
+						<h5 class="header col s12 light">Open up your dreams</h5>
+					</div>
+				</div>
+			</div>
+			<div class="parallax "><img class="blur_img"src="images/IMG_0319a.jpg" alt="Unsplashed background img 1"></div>
+		</div>
+
+		<div class="container">
+			<div class="section">
+			
+				<!--   Icon Section   -->
+				<div class="row">
+					<div class="col s12 offset-m2 m4"">
+						<div class="icon-block">
+							<h2 class="center black-text"><i class="material-icons">desktop_windows</i></h2>
+							<h5 class="center">Automação Comercial</h5>
+			
+							<p class="center light">O processo de automação comercial envolve um conjunto de componentes de hardware comuns à maior parte dos estabelecimentos comerciais.</p>
+						</div>
+					</div>
+			
+					<div class="col s12 m4">
+						<div class="icon-block">
+							<h2 class="center black-text"><i class="material-icons">touch_app</i></h2>
+							<h5 class="center">Biometria</h5>			
+							<p class="center light">Desenvolve sistemas que possibilitem a integração de Biometria nos terminais de auto-atendimento e soluções de automação comercial fornecidos pela Itautec.</p>
+						</div>
+					</div>				
+				</div>
+			
+			</div>
+		</div>
+
+		<div class="parallax-container">
+			<div class="parallax ">
+				<img class=""src="images/IMG_0319a.jpg">
+			</div>
+		</div>	
+		
+		
+		<div class="container container-mid" style="height: 100%;">				
+					<h2 class="header ">Depoimentos</h2>
+					<div class="carousel carousel-slider center " >
+						<% for(var i =0; i < JSON.parse(depoimentos).length; i++) { %>
+							<div class="carousel-item black-text " href="#one!" >
+								<div class="row ">					
+									<div class="col s2" >
+											<img class="circle responsive-img" style="margin-top:50%" src="<%= JSON.parse(depoimentos)[i].imagem%>">
+									</div>
+									<div class="col s10">
+										<div class="row">											
+											<h2 class=" "><%= JSON.parse(depoimentos)[i].nome%></h2>
+											<h6 class="right"><%= JSON.parse(depoimentos)[i].profissao%></h6>
+										</div>
+										
+										<p class=" black-text"><%= JSON.parse(depoimentos)[i].texto%></p>
+									</div>
+								</div>								
+							</div>
+						<% } %>						
+					</div>				
+		</div>
+	
+		
+	</main> 
+	<% include ./base/footer %>
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+	<script src="js/init.js"></script>
+
+	<script>	
+
+		
+		$(document).ready(function(){
+			$('.carousel.carousel-slider').carousel({
+				indicators: true
+			});
+		});
+
+		setInterval(function() {
+			$('.carousel').carousel('next');
+		}, 20000);
+
+		$(window).resize(function() {
+			$('.carousel.carousel-slider').carousel({
+				indicators: true
+			});
+		});
+			
+		
+	</script>
+
+	</body>
+</html>

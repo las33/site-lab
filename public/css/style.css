@@ -1,0 +1,158 @@
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ @import url('https://fonts.googleapis.com/css?family=Bree+Serif');
+ * {
+  font-family: 'Bree Serif', serif;
+}
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+p {
+  line-height: 2rem;
+}
+
+.sidenav-trigger {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+.nav-wrapper .brand-logo img {
+  width: 100px;
+}
+
+.blur_img {
+  filter: blur(4px);
+  -webkit-filter: blur(1x);
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.container {
+    width: 90%;
+}
+
+ .container-mid {
+  width: 70%;
+}
+
+.container-contato {
+  width: 50%;
+}
+
+.p_class { 
+ 
+  text-align: justify;
+ }
+
+
+ .tabs .tab a{
+  color:#000;
+} /*Black color to the text*/
+
+.tabs .tab a:hover {
+  background-color:#eee;
+  color:#000;
+} /*Text color on hover*/
+
+.tabs .tab a.active {
+  color:#000;
+} /*Background and text color when a tab is active*/
+
+.tabs .indicator {
+  background-color:#000;
+} 
+
+.card .card-action {
+  background-color: inherit;
+  border-top: 1px solid rgba(160, 160, 160, 0.2);
+  position: relative;
+  padding: 4px 24px;
+}
+
+
+.card-equipe {
+  width: 32.333333%;
+  margin-left: 1%;
+}
+
+
+.row .col.s1 {
+  width: 8.3333333333%;
+  margin-left: 8%;
+  left: auto;
+  right: auto;
+}
+
+
+
+@media only screen and (max-width : 992px) {
+  .parallax img {
+    max-height: 130%; /* or a little bit higher */
+  }
+}
+
+@media only screen and (min-width: 993px) {
+  .parallax img {
+    max-height: 170%; /* or higher percentages. It's up to your taste */
+  }
+}
+
+.carousel .indicators .indicator-item.active {
+  background-color: #b71c1c ;
+}
+
+
+.carousel .indicators .indicator-item {
+ background-color: rgba(0, 0, 0, 0.5);
+
+}

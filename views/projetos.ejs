@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./base/head %>
+</head>
+<body>
+	<% include ./base/header %> 
+  	<main >
+
+        <div class="parallax-container">
+            <div class="parallax "><img src="images/lab4.jpg"></div>
+        </div>
+        <div class="section white">
+            <div class="container container-mid">       
+                <h2 class="header">Projetos de Pesquisa</h2>
+                <ul id="projetos-ativos" class="tabs ">
+                        <li class="tab col s3 black-text"><a href="#autocom" class="">Automação Comercial</a></li>
+                        <li class="tab col s3"><a href="#biometria">Biometria</a></li>
+                        
+                        
+                </ul>
+           
+
+                <div id="autocom" class="col s12     ">
+                        <% include ./projetos_text/autocom %>
+                </div>
+                
+                <div id="biometria" class="col s12     ">
+                        <% include ./projetos_text/biometria %>
+                </div>
+            </div>
+        </div>
+        
+        <div class="parallax-container">
+            <div class="parallax "><img src="images/lab4.jpg"></div>
+        </div>
+        <div class="section white">
+            <div class="container">       
+                <h2 class="header">Projetos Encerrados</h2>
+                <ul id="projetos-encerrados" class="tabs ">
+                        <li class="tab col s3"><a href="#librix">Librix Diagnostic Center</a></li>
+                        <li class="tab col s3"><a href="#bi">Business Intelligence (BI)</a></li>
+                        <li class="tab col s3"><a href="#mobicash">MobiCash</a></li>
+                        <li class="tab col s3"><a href="#mobile">Mobile</a></li>
+                        <li class="tab col s3"><a href="#portal">Portal para Processos de Desenvolvimento</a></li>
+                </ul>
+            </div>
+
+            <div id="librix" class="col s12 container"> 
+                <% include ./projetos_text/librix %>
+            </div>
+
+            <div id="bi" class="col s12 container  "> 
+                <% include ./projetos_text/bi %>
+            </div>
+
+            <div id="mobicash" class="col s12 container  "> 
+                <% include ./projetos_text/mobicash %>
+            </div>
+
+            <div id="mobile" class="col s12 container  "> 
+                <% include ./projetos_text/mobile %>
+            </div>
+
+            <div id="portal" class="col s12 container  "> 
+                <% include ./projetos_text/portal_processos %>
+            </div>
+        </div>
+
+	</main> 
+	<% include ./base/footer %>
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        
+        <script>
+                $(document).ready(function(){
+                        $('.tabs').tabs();
+                });        
+        </script>
+
+	</body>
+</html>

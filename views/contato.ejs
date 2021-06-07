@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <% include ./base/head %>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+	<% include ./base/header %> 
+  	<main>
+		<div class="parallax-container">
+            <div class="parallax"><img src="images/lab7.jpg"></div>
+        </div>
+        <div class="section white">
+            <div class="row container container-mid">
+                <h2 class="header">Enviar E-mail</h2>
+                <form class="col s12" action="/sendmail" method="POST">
+                    <div class="row">
+                      <div class="input-field col s6">
+                        <input  id="first_name" name="primeiro_nome" type="text" class="validate">
+                        <label for="first_name">Nome</label>
+                      </div>
+                      <div class="input-field col s6">
+                        <input id="last_name" name="segundo_nome" type="text" class="validate">
+                        <label for="last_name">Sobrenome</label>
+                      </div>
+                    </div>
+                    <div class="row">                       
+                            <div class="input-field col s6">
+                              <input id="email" name="email" type="email" class="validate">
+                              <label for="email">Email</label>
+                              <span class="helper-text" data-error="E-mail inválido" data-success=""></span>
+                            </div>
+                            <div class="input-field col s6">
+                                    <input name="assunto" id="assunto" type="text" class="validate">
+                                    <label for="assunto">Assunto</label>
+                            </div>                       
+                    </div>               
+                    
+                    <div class="row">
+                        <div class="input-field col s12">                          
+                            <textarea name="mensagem" id="Mensagem" class="materialize-textarea"></textarea>
+                            <label for="Mensagem">Mensagem</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="g-recaptcha right" data-sitekey="6LcFvZEUAAAAAAwTJ_I87bMhfmrBkCdd0-tUXXAQ"></div></div>
+                    <button class="btn waves-effect waves-light right" type="submit" name="sda">Enviar
+                            <i class="material-icons right">send</i>
+                    </button>                  
+                </form>
+            </div>
+        </div>
+		
+	</main> 
+	<% include ./base/footer %>
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  
+
+  <script type='text/javascript'>
+    
+    console.log("keibardiasd");
+  </script>
+
+  <% if (JSON.parse(enviado) == true) { %>
+    <script type='text/javascript'>
+    
+      M.toast({html: 'E-mail enviado!'}) 
+    </script>
+  <% } %>   
+
+	</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   	<% include ./base/head %>
+</head>
+<body>
+	<% include ./base/header %> 
+  	<main>
+        <div class="parallax-container">
+            <div class="parallax "><img src="images/lab5.jpg"></div>
+        </div>
+        <div class="section white">
+            <div class="container container-mid ">       
+                <ul id="tabs-swipe-demo" class="tabs ">
+                        <li class="tab col s3 black-text"><a href="#quemsomos" class="">Quem Somos</a></li>
+                        <li class="tab col s3"><a href="#missao">Missão</a></li>
+                        <li class="tab col s3"><a href="#beneficios">Benefícios</a></li>
+                </ul>
+            </div>
+
+            <div id="quemsomos" class="col s12 container container-mid ">
+                	<% include ./convenio_text/quem_somos %>
+            </div>
+            <div id="missao" class="col s12  container container-mid ">
+                    <% include ./convenio_text/missao %>
+            </div>
+            <div id="beneficios" class="col s12 container container-mid"> 
+                <% include ./convenio_text/beneficios %>
+            </div>
+        </div>
+	</main> 
+	<% include ./base/footer %>
+	<!--  Scripts-->
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<script src="js/materialize.js"></script>
+        <script src="js/init.js"></script>
+        
+        <script>
+                $(document).ready(function(){
+                        $('.tabs').tabs();
+                });        
+        </script>
+
+	</body>
+</html>
