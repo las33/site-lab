@@ -1,7 +1,10 @@
-# Site OKI Brasil
+# Site Laboratório (NCR/OKI)-CinUFPE
 
+## Demo
 
-Site de apresentacao do prejeto OKI Brasil Cin UFPE. Desenvolvido utilizando Node.js, Express.js e Materialize.css.
+https://site-lab.herokuapp.com/
+
+Site de apresentacao do prejeto NCR - Cin UFPE. Desenvolvido utilizando Node.js, Express.js e Materialize.css.
 
 ### Dependências
 
@@ -33,7 +36,7 @@ Cada json é um lista com objetos que seguem o seguinte formato:
  "cargo":"Cargo",
  "grupo":"Automação Comercial",
  "imagem": "images/equipe/login.jpg",
- "email":"acs@cin.ufpe.br",
+ "email":"",
  "telefone":"numero do ramal"
 }
 ```
